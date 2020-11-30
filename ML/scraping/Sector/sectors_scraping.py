@@ -11,7 +11,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-param = ['auto',
+sectors = ['auto',
          'bankex',
          'bse-cg',
          'bse-cd',  
@@ -36,15 +36,15 @@ param = ['auto',
 ##This is the list of sectors
 
 
-def sectors(i):
-    dfs = pd.read_html('https://money.rediff.com/sectors/bse/' + i,header=0)
+def sectors(sector):
+    dfs = pd.read_html('https://money.rediff.com/sectors/bse/' + str(sector),header=0)
     for df in dfs[:-1]:
         #print(df)
         df1 = df[['Company', '% Change', 'Current Price (Rs)']]
         sorted_df1 = df1.sort_values(by='% Change', ascending=False)
         sorted_df1.reset_index(inplace = True, drop = True)
-    #final_df = sorted_df1[:5]
-       # print(final_df)
+        #final_df = sorted_df1[:5]
+        #print(final_df)
         
  
     
