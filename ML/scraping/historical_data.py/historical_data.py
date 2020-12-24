@@ -44,4 +44,4 @@ class financeData:
         #historical_data = yahoo.get_historical(start_date, end_date)
         #return historical_data
 
-   #getYahooData('', 'tsla', '2020-03-18')
+    #getYahooData('', 'tsla', '2020-03-18')
